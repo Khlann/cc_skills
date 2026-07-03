@@ -1,0 +1,40 @@
+% ==== note-gen Chinese preamble (中英夹杂 notes). Compile with XeLaTeX. ====
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{ctex}                 % Chinese typesetting (requires xelatex)
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{cite}
+
+\onehalfspacing
+\newtheorem{definition}{定义}
+\newtheorem{intuition}{直觉}
+
+% Highlighted callout boxes (English titles, 中文 content)
+\newtcolorbox{keybox}[1][]{colback=blue!5!white,colframe=blue!60!black,
+  fonttitle=\bfseries,title=Key Idea,#1}
+\newtcolorbox{pitfall}[1][]{colback=red!5!white,colframe=red!60!black,
+  fonttitle=\bfseries,title=Common Pitfall,#1}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!8},
+  frame=single,
+  rulecolor=\color{gray!35},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false
+}
+
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\ie}{\textit{i.e.}}
